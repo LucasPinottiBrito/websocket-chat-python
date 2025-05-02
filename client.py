@@ -1,6 +1,8 @@
 import socket, threading
 
-user = input('Username: ')
+user = str(input('Username: '))
+SERVER_ADDRESS = 'localhost'
+SERVER_ADDRESS = str(input("Server IP ADDRESS: "))
 
 def handle_messages(connection: socket.socket):
 
@@ -20,7 +22,6 @@ def handle_messages(connection: socket.socket):
             break
 
 def client() -> None:
-    SERVER_ADDRESS = '172.17.28.23'
     SERVER_PORT = 12000
 
     try:
